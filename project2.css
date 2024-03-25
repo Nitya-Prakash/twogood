@@ -1,0 +1,359 @@
+@font-face {
+  font-family: Futura;
+  src: url(./Futura-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  color: white;
+  background-color: black;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+
+#nav {
+  /* height: 100px; */
+  width: 100%;
+  /* background-color: burlywood; */
+  position: fixed;
+  z-index: 100;
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#nav-part1 {
+  /* background-color: red; */
+  height: 83px;
+  overflow: hidden;
+}
+
+#nav-part1 svg {
+  display: block;
+}
+
+#nav #nav-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+#links {
+  padding: 6px;
+}
+
+#nav-part2 #links a {
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 12px;
+  color: black;
+  text-transform: uppercase;
+  font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+  /* margin-right: 60px; */
+  margin: 0px 20px;
+}
+
+#icons {
+  padding: 8px;
+  border-radius: 50px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+#nav-part2 #icons i:nth-child(1) {
+  font-size: 18px;
+  margin: 5px 50px 5px 15px;
+  font-weight: 100;
+}
+
+#nav-part2 #icons i:nth-last-child(1) {
+  font-size: 18px;
+  margin: 5px 15px 5px 0px;
+  font-weight: 100;
+}
+
+#cursor {
+  height: 180px;
+  width: 180px;
+  background-color: rgba(255, 127, 80, 0.164);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+#page1 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 0vh 2vh;
+  padding-top: 25vh;
+}
+
+#page1 h1 {
+  font-family: futura;
+  font-size: 15.7vw;
+  text-transform: uppercase;
+  line-height: 13vw;
+  font-weight: 700;
+  letter-spacing: -9px;
+}
+
+#vid-container {
+  height: 100vh;
+  width: 100%;
+  margin-top: 1vw;
+  position: relative;
+}
+
+#vid-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+#vid-container #play {
+  padding: 2.5vw 1.6vw;
+  background-color: black;
+  color: #fff;
+  font-size: 1.5vw;
+  text-transform: uppercase;
+  font-family: futura;
+  position: fixed;
+  border-radius: 50%;
+  opacity: 0;
+  scale: 0;
+}
+
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw 1vw;
+}
+
+#page2 .elem {
+  height: 100%;
+  width: 32%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page2 .elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.elem .dets {
+  height: 50px;
+  width: 70%;
+  position: absolute;
+  border-radius: 50px;
+  background-color: #e5f0d6;
+  z-index: 9;
+  transition: all ease 0.2s;
+}
+
+#page3 {
+  min-height: 120vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.child {
+  height: 54vh;
+  width: 38vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.child img {
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  #nav {
+    /* height: 100px; */
+    width: 100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 100;
+    padding: 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  #nav-part1 {
+    /* background-color: red; */
+    height: 62px;
+    overflow: hidden;
+  }
+
+  #nav-part1 svg {
+    display: block;
+    width: 80px;
+    height: 63px;
+  }
+
+  #nav-part1 #svg2 {
+    height: 45px;
+    margin-left: -13px;
+  }
+
+  #nav #nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  #links {
+    padding: 6px;
+    display: none;
+  }
+
+  #nav-part2 #links a {
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 12px;
+    color: black;
+    text-transform: uppercase;
+    font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+    /* margin-right: 60px; */
+    margin: 0px 20px;
+  }
+
+  #icons {
+    padding: 5px;
+    border-radius: 50px;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    /* margin-right: 20px; */
+  }
+
+  #nav-part2 #icons i:nth-child(1) {
+    font-size: 18px;
+    margin: 5px 50px 5px 15px;
+    font-weight: 100;
+  }
+
+  #nav-part2 #icons i:nth-last-child(1) {
+    font-size: 18px;
+    margin: 5px 15px 5px 0px;
+    font-weight: 100;
+  }
+
+  #page1 {
+    min-height: 74vh;
+    padding: 0vh 1.7vh;
+    padding-top: 27vh;
+  }
+
+  #page1 h1 {
+    font-size: 15.4vw;
+    letter-spacing: -3px;
+  }
+
+  #vid-container {
+    height: 30vh;
+    margin-top: 3vw;
+  }
+
+  #vid-container #play {
+    padding: 9.5vw 7vw;
+    font-size: 5vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+    scale: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  #page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 1.7vh;
+  }
+
+  #page2 .elem {
+    height: 70vh;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 4vw;
+  }
+
+  #page2 .elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .elem .dets {
+    height: 50px;
+    width: 70%;
+    position: absolute;
+    border-radius: 50px;
+    background-color: #e5f0d6;
+    z-index: 9;
+  }
+
+  #page3 {
+    min-height: 80vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .child {
+    height: 20vh;
+    width: 50vw;
+    position: relative;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .child img {
+    height: 100%;
+    width: 100%;
+  }
+}
